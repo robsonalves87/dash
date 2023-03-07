@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { CommonsService } from 'commons';
+import { SharedService } from '@shared';
 
 @Component({
   selector: 'app-inicial-dash',
@@ -7,9 +7,9 @@ import { CommonsService } from 'commons';
   styleUrls: ['./inicial-dash.component.scss']
 })
 export class InicialDashComponent {
-  constructor(public commonsService: CommonsService) {}
+  constructor(public sharedService: SharedService) {}
 
-  increment(): void {
-    this.commonsService.increment();
+  decrement(): void {
+    this.sharedService.decrement();
   }
 }
