@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SharedService } from '@shared';
+// import { SharedService } from '@shared';
 
 @Component({
   selector: 'app-inicial-dash',
@@ -7,9 +7,9 @@ import { SharedService } from '@shared';
   styleUrls: ['./inicial-dash.component.scss']
 })
 export class InicialDashComponent {
-  constructor(public sharedService: SharedService) {}
+  // constructor(public sharedService: SharedService) {}
 
-  decrement(): void {
-    this.sharedService.decrement();
-  }
+  // decrement(): void {
+  //   this.sharedService.decrement();
+  // }
 }
