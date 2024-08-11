@@ -6,21 +6,22 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
-
+    pathMatch: 'full',
   },
   {
     path: 'home',
-    component: HomeComponent,
+    loadComponent: () =>
+      import('./home/home.component').then((m) => m.HomeComponent),
   },
   {
     path: 'inicial-dash',
-    loadChildren: () => import('./inicial/inicial.module').then(m => m.InicialModule)
-  }
+    loadChildren: () =>
+      import('./inicial/inicial.module').then((m) => m.InicialModule),
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

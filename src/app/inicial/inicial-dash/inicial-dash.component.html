@@ -1,3 +1,12 @@
-<p>Inicial Dash in MFE</p>
-<!-- <button class="btn btn-light" (click)="decrement()">Decrementar</button>
-{{ sharedService.currentValue }} -->
+<h3>Mfe 1</h3>
+<button class="btn btn-light" (click)="toDecrementValue()">Decrementar</button>
+{{ sharedService.currentValue }}
+
+<hr/>
+
+<p>{{ valueCount() }}</p>
+<p>{{ computed() }}</p>
+
+<button (click)="toIncrementSignal()">Increment</button>
+<button (click)="count.set(0)">Reset</button>
+
